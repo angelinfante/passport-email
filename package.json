@@ -1,0 +1,48 @@
+{
+  "name": "passport-email",
+  "description": "Email verification Strategy for Passport and Node.js.",
+  "version": "0.0.0",
+  "license": "ISC",
+  "keywords": [
+    "passport",
+    "auth",
+    "authentication",
+    "email",
+    "verification"
+  ],
+  "author": {
+    "name": "Angel Infante",
+    "email": "angel.infante.yter@gmail.com",
+    "url": "http://www.angelinfante.me"
+  },
+  "dependencies": {
+    "passport-strategy": "1.x.x"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "istanbul": "^0.3.2",
+    "jshint": "^2.5.6",
+    "jscs": "^1.6.1",
+    "chai": "1.x.x",
+    "chai-passport-strategy": "0.2.x"
+  },
+  "main": "./lib",
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:angelinfante/passport-email.git"
+  }, 
+  "bugs": {
+    "url": "http://github.com/angelinfante/passport-email/issues"
+  }
+}
